@@ -1,0 +1,15 @@
+<h1>Listing attractions</h1>
+<% @attractions.each do |attraction| %>
+    <%= attraction.name %>
+    <%= attraction.tickets %>
+    <% user = User.find(session[:user_id]) %>
+    <% if user.admin == false %>
+        <%= link_to "Go on #{attraction.name.titleize}", "/attractions/#{attraction.id}" %>
+    <% else %>
+        <%= link_to "Show #{attraction.name.titleize}", "/attractions/#{attraction.id}" %>
+    <% end %>
+<% end %>
+
+<% if User.find(session[:user_id]).admin == true %>
+    <%= link_to "New Attraction", "/attractions/new" %>
+<% end %>

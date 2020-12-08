@@ -1,0 +1,10 @@
+<%= form_tag "/users" do %>
+    Name: <%= text_field_tag "user[name]", @user.name %><br>
+    Height: <%= text_field_tag "user[height]", @user.height %><br>
+    Happiness: <%= text_field_tag "user[happiness]", @user.happiness %><br>
+    Nausea: <%= text_field_tag "user[nausea]", @user.nausea %><br>
+    Tickets: <%= text_field_tag "user[tickets]", @user.tickets %><br>
+    Password: <%= password_field_tag "user[password]", @user.password %><br>
+    Check box if you are a theme park owner: <%= check_box_tag "user[admin]", true %>
+    <%= submit_tag "Create User" %>
+<% end %>
