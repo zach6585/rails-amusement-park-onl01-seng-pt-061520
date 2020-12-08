@@ -1,0 +1,18 @@
+<!Doctype HTML>
+<html>
+<body>
+
+<% if @user.admin %>
+    <h1>ADMIN</h1>
+<% end %>
+<% if @message %>
+    <p><%= @message %></p>
+<% end %>
+<h1><%= @user.name %></h1><br>
+<h2>Mood: <%= @user.mood %></h2><br>
+<h2>Tickets: <%= @user.tickets %></h2><br>
+<h2>Height: <%= @user.height %></h2><br>
+<%= link_to "See attractions", "/attractions" %>
+
+</body>
+</html>

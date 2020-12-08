@@ -1,0 +1,17 @@
+<!Doctype html>
+
+<html>
+    <body>
+        <form action="/signed" method="post">
+            <h2>Your name:</h2>
+            <select id="user_name" name="user_name">
+                <% @users.each do |user| %>
+                    <option><%= user.name %></option>
+                <% end %>
+            </select><br>
+            <h2>Your password:</h2>
+            <input type="text" id="password" name="user_password">
+            <input type="submit" id="Sign In" value="Sign In">
+            </form>
+        </body>
+</html>

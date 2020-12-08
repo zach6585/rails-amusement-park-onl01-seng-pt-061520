@@ -1,0 +1,9 @@
+<%= form_tag "/attractions" do %>
+    <%= text_field_tag "attraction[name]", @attraction.name %>
+    <%= text_field_tag "attraction[min_height]", @attraction.min_height %>
+    <%= text_field_tag "attraction[nausea_rating]", @attraction.nausea_rating %>
+    <%= text_field_tag "attraction[happiness_rating]", @attraction.happiness_rating %>
+    <%= text_field_tag "attraction[tickets]", @attraction.tickets %>
+    <%= submit_tag "Create Attraction" %>
+<% end %>
+
